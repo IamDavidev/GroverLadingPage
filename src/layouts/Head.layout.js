@@ -1,9 +1,8 @@
-import headerImg from '../assets/header.jpg'
+import headerImg from '../assets/images/header.jpg'
 import '../components/CardItem.component.js'
-import orange from '../assets/orange.png'
-import clock from '../assets/clock.svg'
-
-import fresa from '../assets/fresa.svg'
+import orange from '../assets/images/orange.png'
+import clock from '../assets/icons/clock.svg'
+import fresa from '../assets/icons/fresa.svg'
 
 class Head extends HTMLElement {
 
@@ -104,11 +103,23 @@ class Head extends HTMLElement {
             background: #fff;
             padding: .6rem 1.2rem;
             border-radius:.8rem;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            animation: animation--move 3.5s ease-in-out infinite;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
             gap:18px;
       }
       .delivary > div > p {
           margin:0;
+      }
+      @keyframes animation--move {
+        0% {
+          transform: translateY(0);
+        }
+        50%{
+          transform: translateY(-10px);
+        }
+        100%{
+          transform: translateY(0);
+        }
       }
 
 

@@ -1,5 +1,5 @@
-import Home from '../assets/take.png'
-import bike from '../assets/bike.png'
+import Home from '../assets/images/take.png'
+import bike from '../assets/images/bike.png'
 
 class homeDealivery extends HTMLElement {
     constructor() {
@@ -13,8 +13,10 @@ class homeDealivery extends HTMLElement {
         .container{
             display:flex;
             flex-direction:row;
+            padding: 33px 120px;
             justify-content:center;
             align-items:center;
+            box-sizing:border-box;
             gap:50px;
         }
         .orderDescription > span{
@@ -42,6 +44,7 @@ class homeDealivery extends HTMLElement {
             border-radius:1rem;
         }
         .contentCard{
+            animation: animation--move 3.5s ease-in-out infinite;
             position: absolute;
             bottom:12rem;
             right: -7rem;
@@ -73,6 +76,17 @@ class homeDealivery extends HTMLElement {
             font-size:.8rem;
 
         }
+        @keyframes animation--move {
+            0% {
+              transform: translateY(0);
+            }
+            50%{
+              transform: translateY(-10px);
+            }
+            100%{
+              transform: translateY(0);
+            }
+          }
     `;
     }
 

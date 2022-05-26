@@ -1,6 +1,6 @@
-import shipping from '../assets/free.svg'
-import warranty from '../assets/warranty.svg'
-import secure from '../assets/secure.svg'
+import shipping from '../assets/icons/free.svg'
+import warranty from '../assets/icons/warranty.svg'
+import secure from '../assets/icons/secure.svg'
 
 
 const services = {
