@@ -117,7 +117,6 @@ class CardItem extends HTMLElement {
     this.price = this.getAttribute("price");
     this.span = this.getAttribute("span");
     this.render();
-    console.log(this.name)
   }
 
   render() {
