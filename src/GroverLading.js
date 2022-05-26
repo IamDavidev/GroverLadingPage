@@ -4,6 +4,7 @@ import './layouts/Services.layout.js'
 import './layouts/find.layout.js'
 import './layouts/homeDealivery.layout.js'
 import './layouts/ourApp.layout.js'
+import './layouts/foooter.layout.js'
 
 // assets
 
@@ -21,7 +22,7 @@ class GroverLading extends HTMLElement {
             padding: 33px 135px;
         }
         main{
-            padding: 33px 120px;
+            // padding: 33px 120px;
         }
     `;
     }
@@ -44,6 +45,7 @@ class GroverLading extends HTMLElement {
             <home-dealivery></home-dealivery>
             <our-app></our-app>
         </main>
+        <footer-layout></footer-layout>
      </div>
      `;
     }

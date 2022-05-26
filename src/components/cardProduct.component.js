@@ -1,22 +1,23 @@
 // import valoration from '../assets/val.svg'
-import melting from '../assets/melting.png'
-import more from '../assets/more.svg'
+import melting from '../assets/images/melting.png'
+import more from '../assets/icons/more.svg'
 
 const products = {
-    melting
+  melting
 }
 
 class cardProduct extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
 
-    static get styles() {
-        return /*css*/`
+  static get styles() {
+    return /*css*/`
         :host{
       }
       .container{
+          animation:animation--move 3.5s ease-in-out infinite;
           background: #fff;
           width:204px;
           display:flex;
@@ -57,19 +58,30 @@ class cardProduct extends HTMLElement {
             box-sizing:border-box;    
             border-radius:8px;
       }
+      @keyframes animation--move {
+        0% {
+          transform: translateY(0);
+        }
+        50%{
+          transform: translateY(-10px);
+        }
+        100%{
+          transform: translateY(0);
+        }
+      }
     `;
-    }
+  }
 
-    connectedCallback() {
-        this.product = this.getAttribute('product');
-        this.type = this.getAttribute('type');
-        this.price = this.getAttribute('price')
-        this.valoration = this.getAttribute('valoration')
-        this.render();
-    }
+  connectedCallback() {
+    this.product = this.getAttribute('product');
+    this.type = this.getAttribute('type');
+    this.price = this.getAttribute('price')
+    this.valoration = this.getAttribute('valoration')
+    this.render();
+  }
 
-    render() {
-        this.shadowRoot.innerHTML =/*html*/`
+  render() {
+    this.shadowRoot.innerHTML =/*html*/`
         <style>${cardProduct.styles}</style>
      <article class='container'>
         <header>
@@ -84,6 +96,6 @@ class cardProduct extends HTMLElement {
         </footer>
      </article>
     `;
-    }
+  }
 }
 customElements.define('card-product', cardProduct);

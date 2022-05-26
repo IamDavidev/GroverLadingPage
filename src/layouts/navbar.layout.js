@@ -1,6 +1,6 @@
-import search from '../assets/search.svg'
-import canasta from '../assets/canasta.svg'
-import logo from '../assets/grover.png'
+import search from '../assets/icons/search.svg'
+import canasta from '../assets/icons/canasta.svg'
+import logo from '../assets/images/grover.png'
 
 class navbar extends HTMLElement {
   constructor() {
@@ -72,20 +72,19 @@ class navbar extends HTMLElement {
     `;
   }
 
-
+  // change color navigation 
   changeRoute() {
 
+    // optener todas los elementos todos las rutas 
     const routes = this.shadowRoot.querySelectorAll('.route');
-    // routes.forEach(route => {
-    //   route.classList.remove('active');
-    // });
-    // const route = this.shadowRoot.querySelector('.route');
-    // route.classList.add('active');
+    // recorer todas las rutas
     routes.forEach(route => {
       route.addEventListener('click', () => {
+        // revocar el estilo de todas las rutas (si lo tienen)
         routes.forEach(route => {
           route.classList.remove('active');
         });
+        // agregar el estilo a la ruta que se hizo click
         route.classList.add('active');
       })
     })

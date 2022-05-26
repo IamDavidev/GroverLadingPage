@@ -1,5 +1,4 @@
-import cart from '../assets/cart.svg'
-
+import cart from '../assets/icons/cart.svg'
 class CardItem extends HTMLElement {
   constructor() {
     super();
@@ -19,7 +18,7 @@ class CardItem extends HTMLElement {
         background: transparent;
         margin:0;
         padding:0;
-        animation: move 3.5s ease-in-out infinite;
+        animation: animation--move 3.5s ease-in-out infinite;
         box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
       }
       .card{
@@ -96,7 +95,8 @@ class CardItem extends HTMLElement {
         padding:.5rem;
         box-sizing:border-box;
       }
-      @keyframes move {
+
+      @keyframes animation--move {
         0% {
           transform: translateY(0);
         }
@@ -117,7 +117,6 @@ class CardItem extends HTMLElement {
     this.price = this.getAttribute("price");
     this.span = this.getAttribute("span");
     this.render();
-    console.log(this.name)
   }
 
   render() {

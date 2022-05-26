@@ -1,4 +1,4 @@
-import why from '../assets/why.png'
+import why from '../assets/images/why.png'
 import '../components/cardProduct.component.js'
 
 class find extends HTMLElement {
@@ -14,10 +14,12 @@ class find extends HTMLElement {
       .container{
           display:flex;
           margin:77px 0 ;
+          padding: 33px 120px;
           flex-direction:row;
           align-items: center;
           justify-content:center;
           gap:250px;
+          box-sizing:border-box;
       }
       .container >  figure {
           margin:0;
@@ -60,7 +62,7 @@ class find extends HTMLElement {
             color:#fff;
             border-radius:12px;
       }
-
+      
     `;
     }
 
