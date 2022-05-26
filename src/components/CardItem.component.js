@@ -1,4 +1,3 @@
-import juice from '../assets/juice.png'
 import cart from '../assets/cart.svg'
 
 class CardItem extends HTMLElement {
@@ -13,16 +12,15 @@ class CardItem extends HTMLElement {
 
       }
       .container{
-        background: #fff;
         width:185px;
         min-height: 250px;
         position:relative;
-        padding-top:40px;
         z-index:-1;
         background: transparent;
         margin:0;
         padding:0;
         animation: move 3.5s ease-in-out infinite;
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
       }
       .card{
         border-radius:20px;
@@ -30,7 +28,7 @@ class CardItem extends HTMLElement {
         width:150px;
         margin:auto;
         z-index:5;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.7);
         top:5rem;
         display:flex;
         flex-direction:column;
@@ -46,8 +44,9 @@ class CardItem extends HTMLElement {
         height:100%;
         position: absolute;
         z-index: 10;
-        top:-3rem;
+        top:-4rem;
         left: 0;
+        object-fit:contain; 
       }
       .cardInformation{
         text-align:center;

@@ -1,8 +1,11 @@
-import './components/CardItem.component.js'
 import './layouts/navbar.layout.js'
+import './layouts/Head.layout.js'
+import './layouts/Services.layout.js'
+import './layouts/find.layout.js'
+import './layouts/homeDealivery.layout.js'
+import './layouts/ourApp.layout.js'
 
 // assets
-import juice from './assets/juice.png'
 
 
 class GroverLading extends HTMLElement {
@@ -17,6 +20,9 @@ class GroverLading extends HTMLElement {
         header{
             padding: 33px 135px;
         }
+        main{
+            padding: 33px 120px;
+        }
     `;
     }
 
@@ -30,7 +36,14 @@ class GroverLading extends HTMLElement {
      <div class='container'>
         <header>
             <navbar-layout></navbar-layout> 
+            <head-layout></head-layout>
         </header>
+        <main>
+            <services-layout></services-layout>
+            <find-layout></find-layout>
+            <home-dealivery></home-dealivery>
+            <our-app></our-app>
+        </main>
      </div>
      `;
     }
